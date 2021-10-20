@@ -8,3 +8,10 @@ if [ "$sysname" = Linux ]; then
 elif [ "$sysname" = FreeBSD ] || [ "$sysname" = OpenBSD ] || [ "$sysname" = Darwin ]; then
     ifconfig "$INTERFACE" down
 fi
+
+if [ "$sysname" = Darwin ]; then
+    scutil << EOF
+    remove State:/Network/Service/tinc-$NETNAME/IPv6
+    remove Setup:/Network/Service/tinc-$NETNAME/IPv6
+EOF
+fi

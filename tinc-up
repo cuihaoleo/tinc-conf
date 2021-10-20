@@ -16,3 +16,15 @@ elif [ "$sysname" = FreeBSD ] || [ "$sysname" = OpenBSD ] || [ "$sysname" = Darw
     ifconfig "$INTERFACE" up
     ifconfig "$INTERFACE" inet6 "$ip6_net:1/48" prefixlen 48
 fi
+
+if [ "$sysname" = Darwin ]; then
+    scutil << EOF
+    d.init
+    d.add Addresses * $ip6_net:1
+    d.add InterfaceName $INTERFACE
+    d.add PrefixLength * 48
+    d.add Router $ip6_net:1
+    set State:/Network/Service/tinc-$NETNAME/IPv6
+    set Setup:/Network/Service/tinc-$NETNAME/IPv6
+EOF
+fi
