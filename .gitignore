@@ -1,0 +1,6 @@
+*
+!.gitignore
+!tinc-up
+!tinc-down
+!hosts/
+!hosts/*

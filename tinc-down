@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sysname=$(uname)
+
+if [ "$sysname" = Linux ]; then
+    ip address flush "$INTERFACE"
+    ip link set "$INTERFACE" down
+elif [ "$sysname" = FreeBSD ] || [ "$sysname" = OpenBSD ] || [ "$sysname" = Darwin ]; then
+    ifconfig "$INTERFACE" down
+fi
