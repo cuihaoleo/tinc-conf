@@ -1,9 +1,0 @@
-Subnet = fd76:d451:4346:6::/64
-Address = loong.e.cvhc.cc
-
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMHWzS/l9xzB+AlFxabk+EOLmRq6DdnCrqXIEziPXPBx+u+3rS8YXfs0
-Gslo0sNPwE8kBx++jyBYeWrmxuffDrytjRealQKNJf5qpg9nQ5AMe0xYZaBbHY3p
-veEFj+5ZM0l9b4NcSZVqws1S8BuyBnsVD8g8nolww9DOAQQUklmjAgMBAAE=
------END RSA PUBLIC KEY-----
-Ed25519PublicKey = IMnjS6xZc9Nlx5jTAcUrd6VslHF0bBPOWUD2jdg9mGJ
